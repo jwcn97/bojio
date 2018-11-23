@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/general.css">
+		<script>
+			function setup(data) {
+				var body = document.body;
+				body.innerHTML = "";
+
+				for (var i = 0; i < 10; i++) {
+					var new_row = document.createElement('div');
+					new_row.className = "jio";
+
+					var html = "";
+					html += '<img src="http://commonextract.com/v3/test280.jpg?i=' + i + '"/>';
+					html += '<div class="italic" style="padding-top: 15px; color: #7E7E7E;">';
+					html += '	Created by Axi Liew #' + i;
+					html += '</div>';
+					html += '<div class="bold">';
+					html += '	10/12/2015 7:00pm';
+					html += '</div>';
+					html += '<div class="bold" style="color: #7E7E7E; font-size: 0.85em;">';
+					html += '	&#x4e01;&#x52a0;&#x5974;&#x5496;&#x55b1;&#x9c7c;&#x9762;';
+					html += '</div>';
+					html += '<div class="bold" style="color: #7E7E7E; font-size: 0.85em;">';
+					html += '	Restaurant Ding Jia Nu Fish Noodle';
+					html += '</div>';
+					html += '<div class="bold">';
+					html += '	4 Friends invited';
+					html += '</div>';
+					html += '<div>';
+					html += '<span style="color: #FDC301; font-size: 1.2em;"> 5 </span>';
+					html += '<img src="images/experience.png" style="height : 1.2em; width: auto; margin: 0; padding: 0;" />';
+					html += '<span style="color: #7E7E7E; font-size: 1.2em;" class="italic">2 hour ago</span>';
+					html += '</div>';
+					html += '<div class="clear"></div>';
+
+					new_row.innerHTML = html;
+
+					body.appendChild(new_row);
+				}
+			};
+		</script>
+		<style>
+			.jio {
+				margin:0 10px;
+				padding-right:10px;
+				border-bottom:solid 1px black;
+			}
+			.jio> img {
+				float:left;
+				height:140px;
+				width:140px;
+				margin:10px;
+			}
+			.jio> div {
+				overflow:hidden;
+				white-space:nowrap;
+				text-overflow:ellipsis;
+				margin:0;
+				padding:0;
+			}
+			.jio> .clear {
+				clear:both;
+			}
+		</style>
+	</head>
+	<body></body>
+</html>

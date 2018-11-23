@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/general.css">
+		<script>
+			var password = "";
+
+			function picture_upload_click() {
+				document.getElementById("picture_upload").setAttribute("disabled", "disabled");
+				Ti.App.fireEvent('signup_presenter_picture_upload');
+			}
+
+			function loadPhoto(mime, media) {
+				if (media) {
+					document.getElementById("photo").setAttribute("src", "data:" + mime + ";base64," + media);
+				}
+				document.getElementById("picture_upload").removeAttribute("disabled");
+			}
+
+			function set_password() {
+				Ti.App.fireEvent('signup_presenter_set_password');
+			}
+
+			function getResult() {
+				return JSON.stringify({
+					name : document.getElementById("txtName").value,
+					username : document.getElementById("txtUsername").value,
+					quote : document.getElementById("txtQuote").value
+				});
+			}
+		</script>
+		<style>
+			#photo {
+				display: table;
+				max-width: 256px;
+				width: 40%;
+				height: auto;
+				border-radius: 50%;
+			}
+
+			#create_password > div {
+				width: -webkit-fit-content;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="center italic">
+			It's free to sign up!
+		</p>
+		<img id="photo" src="images/empty_profile.png" />
+		<button id="picture_upload" onclick="picture_upload_click()">
+			Choose Profile Picture
+		</button>
+		<div class="horizontal-textfield-group">
+			<div class="block"></div>
+			<label>Name: </label>
+			<input type="text" id="txtName" maxlength="128" />
+			<div class="block"></div>
+		</div>
+		<div class="horizontal-textfield-group">
+			<div class="block"></div>
+			<label>Username: </label>
+			<input type="text" id="txtUsername" style="text-transform: lowercase;" maxlength="16" />
+			<div class="block"></div>
+		</div>
+		<div class="horizontal-textfield-group">
+			<div class="block"></div>
+			<label>Quote: </label>
+			<input type="text" id="txtQuote" maxlength="1024" />
+			<div class="block"></div>
+		</div>
+		<div id="create_password" class="horizontal-long-image-button" onclick="set_password()">
+			<div>
+				<img src="images/lock_light.png" />
+				<span>Create Password</span>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/general.css">
+		<script>
+			function getResult(){
+				return JSON.stringify({
+					username : document.getElementById('txtUsername').value,
+					password : document.getElementById('txtPassword').value
+				});
+			}
+		</script>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<div class="horizontal-textfield-group">
+			<div class="block"></div>
+			<label>Username: </label>
+			<input type="text" id="txtUsername" style="text-transform: lowercase;" maxlength="16" />
+			<div class="block"></div>
+		</div>
+		<div class="horizontal-textfield-group">
+			<div class="block"></div>
+			<label>Password: </label>
+			<input type="password" id="txtPassword" />
+			<div class="block"></div>
+		</div>
+	</body>
+</html>

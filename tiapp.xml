@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <id>com.commonextract.bojio</id>
+    <name>Bojio</name>
+    <version>1.0</version>
+    <publisher>ce_macbook</publisher>
+    <url/>
+    <description>undefined</description>
+    <copyright>2016 by ce_macbook</copyright>
+    <icon>appicon.png</icon>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>true</navbar-hidden>
+    <analytics>false</analytics>
+    <guid>618119dc-9fbb-4630-9666-e7a1b51520c8</guid>
+    <property name="ti.ui.defaultunit" type="string">system</property>
+    <ios>
+        <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
+        <plist>
+            <dict>
+                <key>UISupportedInterfaceOrientations~iphone</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                </array>
+                <key>UISupportedInterfaceOrientations~ipad</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                </array>
+                <key>UIRequiresPersistentWiFi</key>
+                <false/>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+                <key>UIStatusBarHidden</key>
+                <false/>
+                <key>UIStatusBarStyle</key>
+                <string>UIStatusBarStyleDefault</string>
+                <key>CFBundleURLTypes</key>
+                <array>
+                    <dict>
+                        <key>CFBundleURLName</key>
+                        <string>com.commonextract.bojio</string>
+                        <key>CFBundleURLSchemes</key>
+                        <array>
+                            <string>fb499153360276363</string>
+                        </array>
+                    </dict>
+                </array>
+                <key>FacebookAppID</key>
+                <string>499153360276363</string>
+                <key>FacebookDisplayName</key>
+                <string>Bojio</string>
+                <key>LSApplicationQueriesSchemes</key>
+                <array>
+                    <string>fbapi</string>
+                    <string>fb-messenger-api</string>
+                    <string>fbauth2</string>
+                    <string>fbshareextension</string>
+                </array>
+                <key>NSAppTransportSecurity</key>
+                <dict>
+                    <key>NSExceptionDomains</key>
+                    <dict>
+                    	<key>cqkok.com</key>
+				        <dict>
+				            <key>NSExceptionAllowsInsecureHTTPLoads</key>
+				            <true/>
+				            <key>NSIncludesSubdomains</key>
+				            <true/>
+				        </dict>
+				        <key>commonextract.com</key>
+				        <dict>
+				            <key>NSExceptionAllowsInsecureHTTPLoads</key>
+				            <true/>
+				            <key>NSIncludesSubdomains</key>
+				            <true/>
+				        </dict>
+                        <key>facebook.com</key>
+                        <dict>
+                            <key>NSIncludesSubdomains</key>
+                            <true/>
+                            <key>NSExceptionRequiresForwardSecrecy</key>
+                            <false/>
+                        </dict>
+                        <key>fbcdn.net</key>
+                        <dict>
+                            <key>NSIncludesSubdomains</key>
+                            <true/>
+                            <key>NSExceptionRequiresForwardSecrecy</key>
+                            <false/>
+                        </dict>
+                        <key>akamaihd.net</key>
+                        <dict>
+                            <key>NSIncludesSubdomains</key>
+                            <true/>
+                            <key>NSExceptionRequiresForwardSecrecy</key>
+                            <false/>
+                        </dict>
+                    </dict>
+                </dict>
+            </dict>
+        </plist>
+    </ios>
+    <android xmlns:android="http://schemas.android.com/apk/res/android">
+        <manifest>
+            <application
+            	android:largeHeap="true">
+            	<activity 
+            		android:screenOrientation="portrait" 
+            		android:name="org.appcelerator.titanium.TiActivity" 
+            		android:configChanges="keyboardHidden|orientation|screenSize"/>
+				<activity 
+					android:screenOrientation="portrait" 
+					android:name="org.appcelerator.titanium.TiTranslucentActivity" 
+					android:configChanges="keyboardHidden|orientation|screenSize" 
+					android:theme="@style/Theme.AppCompat.Translucent"/>
+				<activity 
+					android:screenOrientation="portrait" 
+					android:name="ti.modules.titanium.ui.android.TiPreferencesActivity" 
+					android:configChanges="screenSize"/>
+                <activity
+                	android:screenOrientation="portrait" 
+                    android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+                    android:label="@string/app_name"
+                    android:name="com.facebook.FacebookActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+                <activity android:label="@string/app_name"
+                	android:screenOrientation="portrait" 
+                    android:name="com.facebook.LoginActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+                <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+            </application>
+        </manifest>
+    </android>
+    <mobileweb>
+        <precache/>
+        <splash>
+            <enabled>true</enabled>
+            <inline-css-images>true</inline-css-images>
+        </splash>
+        <theme>default</theme>
+    </mobileweb>
+    <modules>
+        <module platform="android">facebook</module>
+        <module platform="iphone">facebook</module>
+    </modules>
+    <deployment-targets>
+        <target device="android">true</target>
+        <target device="ipad">true</target>
+        <target device="iphone">true</target>
+        <target device="mobileweb">false</target>
+        <target device="windows">false</target>
+    </deployment-targets>
+    <sdk-version>5.2.0.GA</sdk-version>
+    <property name="appc-app-id" type="string">5729a314e4d2b731554538ae</property>
+</ti:app>

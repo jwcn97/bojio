@@ -1,0 +1,94 @@
+@font-face {
+	font-family:AvantGarde-Book;
+	src:url(../fonts/AvantGarde-Book.TTF);
+}
+@font-face {
+	font-family:AvantGarde-BookOblique;
+	src:url(../fonts/AvantGarde-BookOblique.TTF);
+}
+@font-face {
+	font-family:AvantGarde-Demi;
+	src:url(../fonts/AvantGarde-Demi.TTF);
+}
+@font-face {
+	font-family:AvantGarde-DemiOblique;
+	src:url(../fonts/AvantGarde-DemiOblique.TTF);
+}
+* {
+	margin:8px auto;
+	font-size:16px;
+	font-family:AvantGarde-Book;
+	box-sizing:border-box;
+}
+body {
+	margin:0;
+	padding:0;
+}
+.center {
+	text-align:center
+}
+.bold, b {
+	font-family:AvantGarde-Demi;
+}
+.italic, i {
+	font-family:AvantGarde-BookOblique;
+}
+.bold.italic, b> i, i> b {
+	font-family:AvantGarde-DemiOblique;
+}
+.horizontal-textfield-group {
+	width:100%;
+	display:table;
+}
+.horizontal-textfield-group> label {
+	padding:0;
+	margin:0;
+	display:table-cell;
+	width:1px;
+	white-space:pre;
+}
+.horizontal-textfield-group> input[type="text"], .horizontal-textfield-group> input[type="password"] {
+	margin:0;
+	display:table-cell;
+	width:100%;
+}
+.horizontal-textfield-group .block {
+	margin:0;
+	display:table-cell;
+	width:16px;
+	border-radius:5px;
+}
+button {
+	vertical-align:middle;
+	background-color:#FFC800;
+	color:white;
+	text-align:center;
+	display:table;
+	height:40px;
+	padding:auto 32px;
+}
+.horizontal-long-image-button {
+	margin:8px 16px;
+	background-color:#FFC800;
+	color:white;
+	border-radius:8px;
+}
+.horizontal-long-image-button> div {
+	display:flex;
+	align-items:center;
+}
+.horizontal-long-image-button> div> * {
+	margin:0px;
+}
+.horizontal-long-image-button> div> img {
+	height:40px;
+}
+.horizontal-button {
+	background-color:#FFC800;
+	color:white;
+	height:40px;
+	vertical-align:middle;
+	text-align:center;
+	padding:auto 32px;
+	border-radius:8px;
+}

@@ -1,0 +1,23 @@
+var i = 0;
+
+exports.login = i++;
+exports.signup = i++;
+exports.signupCreatePassword = i++;
+exports.home = i++;
+exports.newLevel = i++;
+exports.profile = i++;
+exports.profileSignup = i++;
+exports.changePassword = i++;
+exports.notification = i++;
+exports.jio = i++;
+exports.chat = i++;
+exports.search = i++;
+exports.submitNewPlace = i++;
+exports.retailProfile = i++;
+exports.newjio = i++;
+exports.picker = i++;
+exports.scrollableView = i++;
+exports.pictureViewer = i++;
+exports.loading = i++;
+exports.blocking = i++;
+exports.launchingLoadProgress = i++; 
